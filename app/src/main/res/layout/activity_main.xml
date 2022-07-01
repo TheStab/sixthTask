@@ -4,15 +4,130 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/firstNameEditTxt"
+        android:layout_width="244dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="44dp"
+        android:hint="@string/first_name"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hintColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:inputType="text"
+        android:autofillHints="no" />
+
+    <EditText
+        android:id="@+id/lastNameEditTxt"
+        android:layout_width="244dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="22dp"
+        android:hint="@string/last_name"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hintColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstNameEditTxt"
+        android:inputType="text"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/ageEditTxt"
+        android:layout_width="244dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="22dp"
+        android:hint="@string/age"
+        android:textColorHint="@color/hintColor"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastNameEditTxt"
+        android:inputType="number"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/emailEditTxt"
+        android:layout_width="244dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="22dp"
+        android:hint="@string/email"
+        android:textColorHint="@color/hintColor"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageEditTxt"
+        android:inputType="textEmailAddress"
+        android:importantForAutofill="no" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditTxt">
+
+        <Button
+            android:id="@+id/addBtn"
+            android:layout_width="99dp"
+            android:layout_height="54dp"
+            android:text="@string/add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/removeBtn"
+            android:layout_width="99dp"
+            android:layout_height="54dp"
+            android:text="@string/remove"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/addBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/updateBtn"
+            android:layout_width="99dp"
+            android:layout_height="54dp"
+            android:text="@string/update"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/addBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/activeUsersTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:text="@string/active_users"
+        android:textColor="@color/green"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <TextView
+        android:id="@+id/deletedUsersTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:text="@string/deleted_users"
+        android:textSize="22sp"
+        android:textColor="@color/red"
+        android:gravity="center"
+        android:layout_marginTop="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activeUsersTxt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

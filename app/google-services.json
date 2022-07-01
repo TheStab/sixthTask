@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "663520014505",
+    "project_id": "sixthtasktbc",
+    "storage_bucket": "sixthtasktbc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663520014505:android:9e16f444d453e8f97bf9b8",
+        "android_client_info": {
+          "package_name": "com.example.usefirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663520014505-odn2hdk3fk14ki4vrdc2358hc1v6s2tr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAN5WjXfmWoOFctkEGWPp15dobAJa2vFD0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "663520014505-odn2hdk3fk14ki4vrdc2358hc1v6s2tr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
